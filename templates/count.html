@@ -1,0 +1,22 @@
+<h1>HITUNG</h1>
+<h1>There are {{count}} words in your text</h1>
+
+<h1>Your Text :</h1>
+{{fulltext}}
+
+<br/>
+<h1>Word Count :</h1>
+
+{% for word, counttotal in sortedwords %}
+
+{{word}} - {{counttotal}};
+
+
+{% endfor %}
+<br>
+<br>
+<form action="{% url 'home' %}">
+
+  <input type="submit" name="kembali" value="Start Again !" />
+
+</form>
